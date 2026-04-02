@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Socratic Coding Mentor",
+  "version": "1.0.0",
+  "description": "A Socratic coding mentor browser extension",
+  "content_scripts": [
+    {
+      "js": ["content/index.js"],
+      "matches": [
+        "https://leetcode.com/problems/*",
+        "https://www.codechef.com/problems/*"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*"],
+      "matches": ["https://leetcode.com/*", "https://www.codechef.com/*"]
+    }
+  ]
+}

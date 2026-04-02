@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Socratic Coding Mentor",
+  "version": "1.0.0",
+  "action": { "default_popup": "index.html" },
+  "permissions": ["storage", "activeTab"],
+  "content_scripts": [
+    {
+      "js": ["src/content/index.js"],
+      "matches": ["https://leetcode.com/*", "https://www.codechef.com/*"]
+    }
+  ]
+}
